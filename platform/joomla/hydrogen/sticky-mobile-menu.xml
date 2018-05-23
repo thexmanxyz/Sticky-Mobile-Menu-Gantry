@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="file" method="upgrade" version="3.0">
+    <name>Sticky Mobile Menu - Gantry Atom (Hydrogen)</name>
+    <creationDate>1.0.0</creationDate>
+    <creationDate>23.05.2018</creationDate>
+    <author>Andreas Kar</author>
+    <authorEmail>andreas.kar@gmx.at</authorEmail>
+    <authorUrl></authorUrl>
+    <copyright>© 2017 Andreas Kar</copyright>
+    <license>MIT - see LICENSE.pdf</license>
+    <description>
+        <![CDATA[<div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <h3>Sticky Mobile Menu - Atom for Gantry Framework</h3>
+        <span aria-hidden="true" class="icon-user"></span>&nbsp;<em>Andreas Kar (andreas.kar@gmx.at)</em>
+        <p><b>NOTE</b>:&nbsp;This atom is installed for the Gantry Hydrogen.<br />If you want to install the atom on a different Gantry template, you must manually copy the two files <code>sticky-mobile-menu.yaml</code> and <code>sticky-mobile-menu.html.twig</code> to <code>/templates/[TEMPLATE]/custom/particles</code>.<br>Moreover, you have to copy <code>sticky-mobile-menu.js</code> to <code>/templates/[TEMPLATE]/custom/js</code>.</p></div>]]>
+    </description>
+    <fileset>
+        <files folder="particles" target="templates/g5_hydrogen/custom/particles">
+            <filename>sticky-mobile-menu.html.twig</filename>
+            <filename>sticky-mobile-menu.yaml</filename>
+        </files>
+        <files folder="js" target="templates/g5_hydrogen/custom/js">
+            <filename>sticky-mobile-menu.js</filename>
+        </files>
+    </fileset>
+</extension>

@@ -1,0 +1,66 @@
+#######################################################
+#                                                     #
+#   Sticky Mobile Menu - Atom for Gantry              #
+#                                                     #
+#   Purpose: This project modifies the default        #
+#            mobile menu behavior. Hence, a click     #
+#            on the hamburger menu always shows       #
+#            the current selected sub menu items      #
+#            instead the root menu items.             #
+#                                                     #
+#   Author: Andreas Kar (thex) <andreas.kar@gmx.at>   #
+#                                                     #
+#######################################################
+
+name: Sticky Mobile Menu
+description: Configuration des Sticky Mobile Menu Atoms.
+type: atom
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Aktiviert
+      description: Globale Aktivierung des Sticky Mobile Menu Atoms.
+      default: true
+
+    tabs:
+      type: container.tabs
+      fields:   
+        tab_js:
+            label: Javascript
+            fields:
+                js.placement:
+                  type: select.select
+                  label: JS Platzierung
+                  description: Platzierung des JS.
+                  default: head
+                  options:
+                    head: Header
+                    footer: Footer
+
+                js.priority:
+                  type: input.text
+                  label: JS Priorität
+                  description: Die Priorität des JS.
+                  placeholder: -10 ... 10
+                  default: 0
+
+                js.path:
+                  type: input.text
+                  label: JS Pfad
+                  description: Pfad zur Atom JS Datei auf diesem Server (relativ zu template/custom) oder auf einem anderen Server (absolut).
+                  placeholder: Pfad/zum/JS
+                  default: js/sticky-mobile-menu.js
+
+                js.execution:
+                  type: select.select
+                  label: JS Ausführung
+                  description: Die verwendet Ausführungsmethode für die zu ladende JS Datei.
+                  placeholder: 'Auswahl...'
+                  default: none
+                  options:
+                      none: Keine
+                      async: Asynchron
+                      defer: Verzögert
+                      both: Beide

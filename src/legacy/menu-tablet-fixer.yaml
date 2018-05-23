@@ -1,0 +1,64 @@
+#######################################################
+#                                                     #
+#   Sticky Mobile Menu - Atom for Gantry              #
+#                                                     #
+#   Purpose: This project modifies the default        #
+#            mobile menu behavior. Hence, a click     #
+#            on the hamburger menu always shows       #
+#            the current selected sub menu items      #
+#            instead the root menu items.             #
+#                                                     #
+#   Author: Andreas Kar (thex) <andreas.kar@gmx.at>   #
+#                                                     #
+#######################################################
+
+name: Sticky Mobile Menu
+description: Configure Sticky Mobile Menu Atom.
+type: atom
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable the Sticky Mobile Menu Atom.
+      default: true
+
+    set_js:
+      type: container.set
+      label: Javascript
+      fields:
+        js.placement:
+          type: select.select
+          label: JS Placement
+          description: Placement of the JS.
+          default: head
+          options:
+            head: Header
+            footer: Footer
+
+        js.priority:
+          type: input.text
+          label: JS Priority
+          description: The priority of the JS.
+          placeholder: -10 ... 10
+          default: 0
+
+        js.path:
+          type: input.text
+          label: JS Path
+          description: Path to the Atom JS file either on this server (relative from template/custom) or on a different server (absolute).
+          placeholder: path/to/JS
+          default: js/sticky-mobile-menu.js
+
+        js.execution:
+          type: select.select
+          label: JS Execution
+          description: The used execution method for the loaded JS.
+          placeholder: 'Select...'
+          default: none
+          options:
+              none: None
+              async: Asynchronous
+              defer: Deferred
+              both: Both
