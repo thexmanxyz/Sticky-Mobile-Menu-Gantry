@@ -30,13 +30,13 @@ function StickyMobileMenu(events) {
     
     this.classes = {slide: "g-slide-out", sel: "g-selected", inac: "g-inactive", ac: "g-active"};
     this.selectors = {tMenu: ".g-toplevel", sMenu: ".g-sublevel", iMenu: ".g-menu-item",
-                      dd: ".g-dropdown", ddc: ".g-dropdown-column", mmc: ".g-mobilemenu-container", 
-                      oct: ".g-offcanvas-toggle", slide: "." + this.classes.slide,
+                      dd: ".g-dropdown", ddc: ".g-dropdown-column", oct: ".g-offcanvas-toggle", 
+                      mmc: "#g-mobilemenu-container", slide: "." + this.classes.slide,
                       sel: "." + this.classes.sel, ac: "." + this.classes.ac};
     this.selectors.iaMenu = this.selectors.iMenu + ".active";
     
     /* Helper Functions */
-    this.mmSelector = function (cls){ return this.classes.mmc + " " + cls; };
+    this.mmSelector = function (cls){ return this.selectors.mmc + " " + cls; };
     
     /* Offcanvas Opening */ 
     this.getToggleEvent = function (config){
