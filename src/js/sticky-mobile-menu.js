@@ -13,16 +13,16 @@
 ******************************************************/
 
 jQuery(document).ready(function () {
-    var smm = new stickymobilemenu("touchstart click");
+    var smm = new StickyMobileMenu("touchstart click");
     smm.addToggleEvent();
 });
 
 /*jQuery(window).load(function () {
-    var smm = new stickymobilemenu("touchstart click");
+    var smm = new StickyMobileMenu("touchstart click");
     smm.addToggleEvent();
 });*/
 
-function stickymobilemenu(events) {
+function StickyMobileMenu(events) {
 
     /* Flags, Events, Classes and Selectors */
     this.toggleClicked = false;
@@ -45,7 +45,7 @@ function stickymobilemenu(events) {
             var $deepestItem;
             var $activeItem;    
             
-            if(stickymobilemenu.memory && this.toggleClicked)
+            if(StickyMobileMenu.memory && this.toggleClicked)
                 return;
             else if(!this.toggleClicked)
                 this.toggleClicked = true;
