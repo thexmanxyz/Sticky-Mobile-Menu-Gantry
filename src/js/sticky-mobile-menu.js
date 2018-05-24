@@ -23,10 +23,7 @@ jQuery(document).ready(function () {
 });*/
 
 function stickymobilemenu(events) {
-    
-    /* Helper Functions */
-    this.clsSelector = function (cls){ return (!cls.startsWith(".")) ? "." + cls : cls; };
-    
+
     /* Flags, Events, Classes and Selectors */
     this.toggleClicked = false;
     this.events = events;
@@ -34,15 +31,14 @@ function stickymobilemenu(events) {
     this.classes = {slide: "g-slide-out", sel: "g-selected", inac: "g-inactive", ac: "g-active"};
     this.selectors = {tMenu: ".g-toplevel", sMenu: ".g-sublevel", iMenu: ".g-menu-item",
                       dd: ".g-dropdown", ddc: ".g-dropdown-column", mmc: ".g-mobilemenu-container", 
-                      oct: ".g-offcanvas-toggle",
-                      slide: this.clsSelector(this.classes.slide),
-                      sel: this.clsSelector(this.classes.sel),
-                      ac: this.clsSelector(this.classes.ac)};
-    
+                      oct: ".g-offcanvas-toggle", slide: "." + this.classes.slide,
+                      sel: "." + this.classes.sel, ac: "." + this.classes.ac};
     this.selectors.iaMenu = this.selectors.iMenu + ".active";
     
-    /* Offcanvas Opening */ 
+    /* Helper Functions */
     this.mmSelector = function (cls){ return this.classes.mmc + " " + cls; };
+    
+    /* Offcanvas Opening */ 
     this.getToggleEvent = function (config){
         return function(){
             var lowest = 0;
