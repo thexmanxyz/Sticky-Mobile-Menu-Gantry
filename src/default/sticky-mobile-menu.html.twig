@@ -39,7 +39,7 @@
 
 {%- block particle -%}
     {%- scripts in jsPlace with { priority: jsPrior } -%}
-        <script>window.StickyMobileMenu.memory = {{ (particle.memorize ? "true" : false)|raw }};</script>
+        <script>window.StickyMobileMenu.memory = {{ (particle.memorize == 1 ? "true" : "false")|raw }};</script>
         <script type="{{scriptType}}" src="{{url(jsPath)}}"{{jsExec}}></script>
     {%- endscripts -%}
 {%- endblock -%}
