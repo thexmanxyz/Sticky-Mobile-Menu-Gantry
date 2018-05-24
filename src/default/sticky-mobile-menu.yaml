@@ -24,6 +24,12 @@ form:
       description: Globally enable the Sticky Mobile Menu Atom.
       default: true
 
+    memorize:
+      type: input.checkbox
+      label: Memory
+      description: Save the last active menu position.
+      default: 1
+
     tabs:
       type: container.tabs
       fields:

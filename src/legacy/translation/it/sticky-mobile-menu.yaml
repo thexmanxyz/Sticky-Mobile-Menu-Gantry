@@ -24,6 +24,12 @@ form:
       description: Abilita globalmente le Atomo Sticky Mobile Menu.
       default: true
 
+    memorize:
+      type: input.checkbox
+      label: Ricordare
+      description: Ricorda l'ultima voce di menu attiva.
+      default: 1
+
     set_js:
       type: container.set
       label: Javascript

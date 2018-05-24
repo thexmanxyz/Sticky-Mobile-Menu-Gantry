@@ -24,6 +24,12 @@ form:
       description: Globale Aktivierung des Sticky Mobile Menu Atoms.
       default: true
 
+    memorize:
+      type: input.checkbox
+      label: Merken
+      description: Die letzte aktive Menu Position merken.
+      default: 1
+
     set_js:
       type: container.set
       label: Javascript

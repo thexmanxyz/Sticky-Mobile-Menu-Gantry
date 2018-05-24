@@ -13,59 +13,78 @@
 ******************************************************/
 
 jQuery(document).ready(function () {
-    jQuery(".g-offcanvas-toggle").on('touchstart click', handleOffcanvasEvent);
+    var smm = new stickymobilemenu("touchstart click");
+    smm.addToggleEvent();
 });
 
 /*jQuery(window).load(function () {
-    jQuery(".g-offcanvas-toggle").on('touchstart click', handleOffcanvasEvent);
+    var smm = new stickymobilemenu("touchstart click");
+    smm.addToggleEvent();
 });*/
 
-function handleOffcanvasEvent(){
-    var slideCls = "g-slide-out";
-    var selCls = "g-selected";
-    var inacCls = "g-inactive";
-    var acCls = "g-active";
-
-    var slideClsSel = "." + slideCls;
-    var selClsSel = "." + selCls;
-    var acClsSel = "." + acCls;
-
-    var topMSel = ".g-toplevel";
-    var subMSel = ".g-sublevel";
-    var ddCSel = ".g-dropdown-column";
-    var ddSel = ".g-dropdown";
+function stickymobilemenu(events) {
     
-    var mItmSel = ".g-menu-item";
-    var aMItmSel = mItmSel + ".active";
-
-    var lowest = 0;
-    var $deepestItem;
+    /* Helper Functions */
+    this.clsSelector = function (cls){ return (!cls.startsWith(".")) ? "." + cls : cls; };
     
-    var $activeItem = jQuery(aMItmSel);
-
-    $activeItem.each(function() {
-        var depth = jQuery(this).parents().length;
-        if (depth > lowest) {
-            $deepestItem = jQuery(this);
-            lowest = depth;
-        }
-    });
-
-    var $nextDDC = $deepestItem.parents(ddCSel).first()
-    var $topLevel = $nextDDC.parents(topMSel).first();
-    var $subLevels = $nextDDC.parents(subMSel);
-    var $menuItems = $nextDDC.parents(mItmSel);
-    var $dropDowns = $nextDDC.parents(ddSel);
+    /* Flags, Events, Classes and Selectors */
+    this.toggleClicked = false;
+    this.events = events;
     
-    jQuery(slideClsSel).removeClass(slideCls);
-    jQuery(selClsSel).removeClass(selCls);
-    jQuery(acClsSel).removeClass(acCls);
+    this.classes = {slide: "g-slide-out", sel: "g-selected", inac: "g-inactive", ac: "g-active"};
+    this.selectors = {tMenu: ".g-toplevel", sMenu: ".g-sublevel", iMenu: ".g-menu-item",
+                      dd: ".g-dropdown", ddc: ".g-dropdown-column", mmc: ".g-mobilemenu-container", 
+                      oct: ".g-offcanvas-toggle",
+                      slide: this.clsSelector(this.classes.slide),
+                      sel: this.clsSelector(this.classes.sel),
+                      ac: this.clsSelector(this.classes.ac)};
+    
+    this.selectors.iaMenu = this.selectors.iMenu + ".active";
+    
+    /* Offcanvas Opening */ 
+    this.mmSelector = function (cls){ return this.classes.mmc + " " + cls; };
+    this.getToggleEvent = function (config){
+        return function(){
+            var lowest = 0;
+            var $deepestItem;
+            var $activeItem;    
+            
+            if(stickymobilemenu.memory && this.toggleClicked)
+                return;
+            else if(!this.toggleClicked)
+                this.toggleClicked = true;
+            
+            $activeItem = jQuery(config.selectors.iaMenu);
+            $activeItem.each(function() {
+                var depth = jQuery(this).parents().length;
+                if (depth > lowest) {
+                    $deepestItem = jQuery(this);
+                    lowest = depth;
+                }
+            });
 
-    $topLevel.addClass(slideCls);
-    if($subLevels.length > 0)
-        $subLevels.addClass(slideCls);
+            var $ddcMatch = $deepestItem.parents(config.selectors.ddc).first()
+            var $topLevel = $ddcMatch.parents(config.selectors.tMenu).first();
+            var $subLevels = $ddcMatch.parents(config.selectors.sMenu);
+            var $menuItems = $ddcMatch.parents(config.selectors.iMenu);
+            var $dropDowns = $ddcMatch.parents(config.selectors.dd);
 
-    $menuItems.addClass(selCls);
-    $dropDowns.removeClass(inacCls);
-    $dropDowns.addClass(acCls);
-}
+            jQuery(config.mmSelector(config.selectors.slide)).removeClass(config.classes.slide);
+            jQuery(config.mmSelector(config.selectors.sel)).removeClass(config.classes.sel);
+            jQuery(config.mmSelector(config.selectors.ac)).removeClass(config.classes.ac);
+
+            $topLevel.addClass(config.classes.slide);
+            if($subLevels.length > 0)
+                $subLevels.addClass(config.classes.slide);
+
+            $menuItems.addClass(config.classes.sel);
+            $dropDowns.removeClass(config.classes.inac);
+            $dropDowns.addClass(config.classes.ac);
+        };
+    };
+    
+    this.addToggleEvent = function(option){
+        jQuery(this.selectors.oct).on(this.events, this.getToggleEvent(this));
+    };
+};
+
