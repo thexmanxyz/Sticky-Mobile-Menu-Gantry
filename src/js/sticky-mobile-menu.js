@@ -13,14 +13,14 @@
 ******************************************************/
 
 jQuery(document).ready(function () {
-    jQuery(".g-offcanvas-toggle").on('touchstart click', setMobileMenuOpen);
+    jQuery(".g-offcanvas-toggle").on('touchstart click', handleOffcanvasEvent);
 });
 
 /*jQuery(window).load(function () {
-    jQuery(".g-offcanvas-toggle").on('touchstart click', setMobileMenuOpen);
+    jQuery(".g-offcanvas-toggle").on('touchstart click', handleOffcanvasEvent);
 });*/
 
-function setMobileMenuOpen(){
+function handleOffcanvasEvent(){
     var slideCls = "g-slide-out";
     var selCls = "g-selected";
     var inacCls = "g-inactive";
@@ -51,21 +51,21 @@ function setMobileMenuOpen(){
         }
     });
 
-    var $nextDDC = $deepestItem.parents(ddCSel)
-    var $topLevel = $nextDDC.parents(topMSel);
-    var $subLevel = $nextDDC.parents(subMSel);
-    var $dropDown = $nextDDC.parents(ddSel);
-    var $menuItem = $nextDDC.parents(mItmSel);
+    var $nextDDC = $deepestItem.parents(ddCSel).first()
+    var $topLevel = $nextDDC.parents(topMSel).first();
+    var $subLevels = $nextDDC.parents(subMSel);
+    var $menuItems = $nextDDC.parents(mItmSel);
+    var $dropDowns = $nextDDC.parents(ddSel);
     
     jQuery(slideClsSel).removeClass(slideCls);
     jQuery(selClsSel).removeClass(selCls);
     jQuery(acClsSel).removeClass(acCls);
 
-    if($subLevel.length > 0)
-        $subLevel.addClass(slideCls);
-
     $topLevel.addClass(slideCls);
-    $dropDown.removeClass(inacCls);
-    $dropDown.addClass(acCls);
-    $menuItem.addClass(selCls);
+    if($subLevels.length > 0)
+        $subLevels.addClass(slideCls);
+
+    $menuItems.addClass(selCls);
+    $dropDowns.removeClass(inacCls);
+    $dropDowns.addClass(acCls);
 }
