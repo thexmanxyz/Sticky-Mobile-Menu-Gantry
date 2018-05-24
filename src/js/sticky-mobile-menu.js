@@ -43,14 +43,16 @@ function StickyMobileMenu(events) {
         return function(){
             var lowest = 0;
             var $deepestItem;
-            var $activeItem;    
+            var $activeItem;  
+            var cSel = config.selectors;
+            var cCls = config.classes;
             
             if(StickyMobileMenu.memory && this.toggleClicked)
                 return;
             else if(!this.toggleClicked)
                 this.toggleClicked = true;
             
-            $activeItem = jQuery(config.selectors.iaMenu);
+            $activeItem = jQuery(cSel.iaMenu);
             $activeItem.each(function() {
                 var depth = jQuery(this).parents().length;
                 if (depth > lowest) {
@@ -59,23 +61,23 @@ function StickyMobileMenu(events) {
                 }
             });
 
-            var $ddcMatch = $deepestItem.parents(config.selectors.ddc).first()
-            var $topLevel = $ddcMatch.parents(config.selectors.tMenu).first();
-            var $subLevels = $ddcMatch.parents(config.selectors.sMenu);
-            var $menuItems = $ddcMatch.parents(config.selectors.iMenu);
-            var $dropDowns = $ddcMatch.parents(config.selectors.dd);
+            var $ddcMatch = $deepestItem.parents(cSel.ddc).first()
+            var $topLevel = $ddcMatch.parents(cSel.tMenu).first();
+            var $subLevels = $ddcMatch.parents(cSel.sMenu);
+            var $menuItems = $ddcMatch.parents(cSel.iMenu);
+            var $dropDowns = $ddcMatch.parents(cSel.dd);
 
-            jQuery(config.mmSelector(config.selectors.slide)).removeClass(config.classes.slide);
-            jQuery(config.mmSelector(config.selectors.sel)).removeClass(config.classes.sel);
-            jQuery(config.mmSelector(config.selectors.ac)).removeClass(config.classes.ac);
+            jQuery(config.mmSelector(cSel.slide)).removeClass(cCls.slide);
+            jQuery(config.mmSelector(cSel.sel)).removeClass(cCls.sel);
+            jQuery(config.mmSelector(cSel.ac)).removeClass(cCls.ac);
 
-            $topLevel.addClass(config.classes.slide);
+            $topLevel.addClass(cCls.slide);
             if($subLevels.length > 0)
-                $subLevels.addClass(config.classes.slide);
+                $subLevels.addClass(cCls.slide);
 
-            $menuItems.addClass(config.classes.sel);
-            $dropDowns.removeClass(config.classes.inac);
-            $dropDowns.addClass(config.classes.ac);
+            $menuItems.addClass(cCls.sel);
+            $dropDowns.removeClass(cCls.inac);
+            $dropDowns.addClass(cCls.ac);
         };
     };
     
