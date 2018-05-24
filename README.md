@@ -52,6 +52,7 @@ Please be aware that the template folder path varies in dependence of the used C
 3. Configure the appearance according to your favor.
 
 ## Supported Parameters and Atom Options
+* Memorize Menu Selection
 * JS Configuration
   * Remote or Local
   * Priority and Position (head or footer)
