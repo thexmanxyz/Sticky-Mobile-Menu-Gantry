@@ -37,9 +37,13 @@
     {% set jsExec = ' ' ~ jsExec %}
 {% endif %}
 
+{% set enableMemory = (particle.memorize == 1 ? "true" : "false") %}
 {%- block particle -%}
     {%- scripts in jsPlace with { priority: jsPrior } -%}
-        <script>window.StickyMobileMenu.memory = {{ (particle.memorize == 1 ? "true" : "false")|raw }};</script>
+        <script>
+            window.StickyMobileMenu.memory = {{ enableMemory|raw }};
+            window.StickyMobileMenu.mode = {{ particle.mode|raw }};
+        </script>
         <script type="{{scriptType}}" src="{{url(jsPath)}}"{{jsExec}}></script>
     {%- endscripts -%}
 {%- endblock -%}

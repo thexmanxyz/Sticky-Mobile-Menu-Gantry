@@ -30,6 +30,16 @@ form:
       description: Die letzte aktive Menu Position merken.
       default: 1
 
+    mode:
+      type: select.select
+      label: Modus
+      description: Wählen Sie das priorisierte Menu aus.
+      placeholder: 'Wählen...'
+      default: 1
+      options:
+          1: Untermenü
+          2: OberMenü
+
     set_js:
       type: container.set
       label: Javascript

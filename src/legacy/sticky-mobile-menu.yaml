@@ -30,6 +30,16 @@ form:
       description: Save the last active menu position.
       default: 1
 
+    mode:
+      type: select.select
+      label: Mode
+      description: Select the priority of the menu level.
+      placeholder: 'Select...'
+      default: 1
+      options:
+          1: Sub Menu
+          2: Top Menu
+
     set_js:
       type: container.set
       label: Javascript

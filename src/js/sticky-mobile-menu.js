@@ -41,9 +41,9 @@ function StickyMobileMenu(events) {
     /* Offcanvas Opening */ 
     this.getToggleEvent = function (config){
         return function(){
-            var lowest = 0;
-            var $deepestItem;
-            var $activeItem;  
+            var lowest = 0, highest = Number.MAX_VALUE;
+            var $deepestItem, $highestItem;
+            var $activeItems, $activeItem;  
             var cSel = config.selectors;
             var cCls = config.classes;
             
@@ -52,32 +52,40 @@ function StickyMobileMenu(events) {
             else if(!this.toggleClicked)
                 this.toggleClicked = true;
             
-            $activeItem = jQuery(cSel.iaMenu);
-            $activeItem.each(function() {
+            $activeItems = jQuery(cSel.iaMenu);
+            $activeItems.each(function() {
                 var depth = jQuery(this).parents().length;
                 if (depth > lowest) {
                     $deepestItem = jQuery(this);
                     lowest = depth;
                 }
+                if(depth < highest){
+                    $highestItem = jQuery(this);
+                    highest = depth;
+                }
             });
+            
+            
+            var $activeItem = (StickyMobileMenu.mode == 1) ? $deepestItem : $highestItem;
+            if($activeItem.length){
+                var $ddcMatch = $activeItem.parents(cSel.ddc).first()
+                var $topLevel = $ddcMatch.parents(cSel.tMenu).first();
+                var $subLevels = $ddcMatch.parents(cSel.sMenu);
+                var $menuItems = $ddcMatch.parents(cSel.iMenu);
+                var $dropDowns = $ddcMatch.parents(cSel.dd);
 
-            var $ddcMatch = $deepestItem.parents(cSel.ddc).first()
-            var $topLevel = $ddcMatch.parents(cSel.tMenu).first();
-            var $subLevels = $ddcMatch.parents(cSel.sMenu);
-            var $menuItems = $ddcMatch.parents(cSel.iMenu);
-            var $dropDowns = $ddcMatch.parents(cSel.dd);
+                jQuery(config.mmSelector(cSel.slide)).removeClass(cCls.slide);
+                jQuery(config.mmSelector(cSel.sel)).removeClass(cCls.sel);
+                jQuery(config.mmSelector(cSel.ac)).removeClass(cCls.ac);
 
-            jQuery(config.mmSelector(cSel.slide)).removeClass(cCls.slide);
-            jQuery(config.mmSelector(cSel.sel)).removeClass(cCls.sel);
-            jQuery(config.mmSelector(cSel.ac)).removeClass(cCls.ac);
+                $topLevel.addClass(cCls.slide);
+                if($subLevels.length > 0)
+                    $subLevels.addClass(cCls.slide);
 
-            $topLevel.addClass(cCls.slide);
-            if($subLevels.length > 0)
-                $subLevels.addClass(cCls.slide);
-
-            $menuItems.addClass(cCls.sel);
-            $dropDowns.removeClass(cCls.inac);
-            $dropDowns.addClass(cCls.ac);
+                $menuItems.addClass(cCls.sel);
+                $dropDowns.removeClass(cCls.inac);
+                $dropDowns.addClass(cCls.ac);
+            }
         };
     };
     

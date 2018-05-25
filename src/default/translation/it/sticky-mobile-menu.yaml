@@ -30,6 +30,16 @@ form:
       description: Ricorda l'ultima voce di menu attiva.
       default: 1
 
+    mode:
+      type: select.select
+      label: Modalità
+      description: Select the priority of the menu level.
+      placeholder: 'Selezionare...'
+      default: 1
+      options:
+          1: Menu Inferiore
+          2: Menu Superiore
+
     tabs:
       type: container.tabs
       fields:
