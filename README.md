@@ -1,5 +1,5 @@
 # Sticky Mobile Menu - Atom for Gantry
-This project modifies the default mobile menu behavior of the Gantry templating framework. **Sticky Mobile Menu** was created to keep the current selected sub menu items focused within the hamburger menu / offcanvas section. Hence, instead of showing the root menu items, the current active sub menu items are displayed. Furthermore, it provides an easy, user friendly and GUI assisted configuration and integration. In the current revision the following CMSs are supported:
+This project enable control over the default mobile menu behavior within the Gantry templating framework. **Sticky Mobile Menu** was created to keep the current selected sub menu items focused within the hamburger menu / offcanvas section. Hence, instead of showing the root menu items, the current active sub menu items are displayed. Furthermore, it provides an easy, user friendly and GUI assisted configuration and integration. In the current revision the following CMSs are supported:
 * Joomla
 * Wordpress
 * Grav
