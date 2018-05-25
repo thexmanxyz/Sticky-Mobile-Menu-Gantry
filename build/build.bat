@@ -3,7 +3,7 @@ REM #######################################################
 REM #                                                     #
 REM #   Sticky Mobile Menu - Atom for Gantry              #
 REM #                                                     #
-REM #   Purpose: This project modifies the default        #
+REM #   Purpose: This project enables control over the    #
 REM #            mobile menu behavior. Hence, a click     #
 REM #            on the hamburger menu always shows       #
 REM #            the current selected sub menu items      #
