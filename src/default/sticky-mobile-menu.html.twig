@@ -41,8 +41,8 @@
 {%- block particle -%}
     {%- scripts in jsPlace with { priority: jsPrior } -%}
         <script>
-            window.StickyMobileMenu.memory = {{ enableMemory|raw }};
-            window.StickyMobileMenu.mode = {{ particle.mode|raw }};
+            window.StickyMobileMenu.memory = {{ enableMemory|e('js') }};
+            window.StickyMobileMenu.mode = {{ particle.mode|e('js') }};
         </script>
         <script type="{{scriptType}}" src="{{url(jsPath)}}"{{jsExec}}></script>
     {%- endscripts -%}
