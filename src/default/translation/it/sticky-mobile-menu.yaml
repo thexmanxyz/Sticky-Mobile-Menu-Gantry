@@ -13,7 +13,7 @@
 #######################################################
 
 name: Sticky Mobile Menu
-description: Configurazione Atomo Sticky Mobile Menu.
+description: Migliora il comportamento del menu mobile.
 type: atom
 
 form:

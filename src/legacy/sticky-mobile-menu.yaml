@@ -13,7 +13,7 @@
 #######################################################
 
 name: Sticky Mobile Menu
-description: Configure Sticky Mobile Menu Atom.
+description: Improves the mobile menu behaviour.
 type: atom
 
 form:
