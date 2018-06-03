@@ -47,7 +47,7 @@ function StickyMobileMenu(events) {
             var cSel = config.selectors;
             var cCls = config.classes;
             
-            if(StickyMobileMenu.memory && this.toggleClicked)
+            if(stickymobilemenu.memory && this.toggleClicked)
                 return;
             else if(!this.toggleClicked)
                 this.toggleClicked = true;
@@ -66,7 +66,7 @@ function StickyMobileMenu(events) {
             });
             
             
-            var $activeItem = (StickyMobileMenu.mode == 1) ? $deepestItem : $highestItem;
+            var $activeItem = (stickymobilemenu.mode == 1) ? $deepestItem : $highestItem;
             if($activeItem.length){
                 var $ddcMatch = $activeItem.parents(cSel.ddc).first()
                 var $topLevel = $ddcMatch.parents(cSel.tMenu).first();
