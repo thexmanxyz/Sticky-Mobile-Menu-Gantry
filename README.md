@@ -17,7 +17,7 @@ ___
 **Legacy Atom - Gantry <5.3.2:**
 [English](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.3/smm.atom.only.legacy.EN.v1.0.3.zip) / [Italian](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.3/smm.atom.only.legacy.IT.v1.0.3.zip) / [German](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.3/smm.atom.only.legacy.DE.v1.0.3.zip)
 
-**Joomla Plugin - Gantry Global:**
+**Joomla Plugin - All Templates (Global):**
 [English](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.3/smm.j3.global.EN.v1.0.3.zip) / [Italian](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.3/smm.j3.global.IT.v1.0.3.zip) / [German](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.3/smm.j3.global.DE.v1.0.3.zip)
 
 **Joomla Plugin - Hydrogen:**
