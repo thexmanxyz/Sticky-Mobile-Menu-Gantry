@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <extension type="file" method="upgrade" version="3.0">
     <name>Sticky Mobile Menu - Gantry Atom (Helium)</name>
-    <version>1.0.4</version>
-    <creationDate>04.06.2018</creationDate>
+    <version>1.0.5</version>
+    <creationDate>18.08.2018</creationDate>
     <author>Andreas Kar</author>
     <authorEmail>andreas.kar@gmx.at</authorEmail>
     <authorUrl></authorUrl>

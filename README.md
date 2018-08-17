@@ -9,22 +9,22 @@ This project enable control over the default mobile menu behavior within the Gan
 * Gantry Templating Framework and Theme
 
 ## Download
-Choose the correct download for your target platform. Joomla Plugin System supported for all Gantry themes globally and locally for Helium or Hydrogen. The latest Atom version is **v1.0.4**.
+Choose the correct download for your target platform. Joomla Plugin System supported for all Gantry themes globally and locally for Helium or Hydrogen. The latest Atom version is **v1.0.5**.
 ___
 **Default Atom:**
-[English](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.4/smm.atom.only.EN.v1.0.4.zip) / [Italian](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.4/smm.atom.only.IT.v1.0.4.zip) / [German](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.4/smm.atom.only.DE.v1.0.4.zip)
+[English](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.5/smm.atom.only.EN.v1.0.5.zip) / [Italian](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.5/smm.atom.only.IT.v1.0.5.zip) / [German](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.5/smm.atom.only.DE.v1.0.5.zip)
 
 **Legacy Atom - Gantry <5.3.2:**
-[English](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.4/smm.atom.only.legacy.EN.v1.0.4.zip) / [Italian](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.4/smm.atom.only.legacy.IT.v1.0.4.zip) / [German](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.4/smm.atom.only.legacy.DE.v1.0.4.zip)
+[English](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.5/smm.atom.only.legacy.EN.v1.0.5.zip) / [Italian](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.5/smm.atom.only.legacy.IT.v1.0.5.zip) / [German](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.5/smm.atom.only.legacy.DE.v1.0.5.zip)
 
 **Joomla Plugin - All Templates (Global):**
-[English](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.4/smm.j3.global.EN.v1.0.4.zip) / [Italian](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.4/smm.j3.global.IT.v1.0.4.zip) / [German](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.4/smm.j3.global.DE.v1.0.4.zip)
+[English](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.5/smm.j3.global.EN.v1.0.5.zip) / [Italian](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.5/smm.j3.global.IT.v1.0.5.zip) / [German](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.5/smm.j3.global.DE.v1.0.5.zip)
 
 **Joomla Plugin - Hydrogen:**
-[English](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.4/smm.j3.hydrogen.EN.v1.0.4.zip) / [Italian](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.4/smm.j3.hydrogen.IT.v1.0.4.zip) / [German](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.4/smm.j3.hydrogen.DE.v1.0.4.zip)
+[English](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.5/smm.j3.hydrogen.EN.v1.0.5.zip) / [Italian](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.5/smm.j3.hydrogen.IT.v1.0.5.zip) / [German](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.5/smm.j3.hydrogen.DE.v1.0.5.zip)
 
 **Joomla Plugin - Helium:**
-[English](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.4/smm.j3.helium.EN.v1.0.4.zip) / [Italian](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.4/smm.j3.helium.IT.v1.0.4.zip) / [German](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.4/smm.j3.helium.DE.v1.0.4.zip)
+[English](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.5/smm.j3.helium.EN.v1.0.5.zip) / [Italian](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.5/smm.j3.helium.IT.v1.0.5.zip) / [German](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.5/smm.j3.helium.DE.v1.0.5.zip)
 ___
 
 ## Automatic Installation (Joomla only)
