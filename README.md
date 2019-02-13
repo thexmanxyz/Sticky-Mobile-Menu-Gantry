@@ -9,7 +9,7 @@ This project enable control over the default mobile menu behavior within the Gan
 * Gantry Templating Framework and Theme
 
 ## Download
-Choose the correct download for your target platform. Joomla Plugin System supported for all Gantry themes globally and locally for Helium or Hydrogen. The latest Atom version is **v1.0.5**.
+Choose the correct download for your target platform. The Joomla Plugin System is supported for all Gantry themes globally or locally for the templates Helium and Hydrogen. The latest Atom version is **v1.0.5**.
 ___
 **Default Atom:**
 [English](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.5/smm.atom.only.EN.v1.0.5.zip) / [Italian](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.5/smm.atom.only.IT.v1.0.5.zip) / [German](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry/releases/download/v1.0.5/smm.atom.only.DE.v1.0.5.zip)
@@ -36,8 +36,8 @@ ___
 ## Manual Installation
 1. Download the **Default or Legacy Package** of the *Sticky Mobile Menu Atom*. If you are using Gantry **<5.3.2** please use the **Legacy Package** for compatibility reasons.
 2. Extract the files.
-3. Copy the `.html.twig` and the `.yaml` file to your particle folder `/[GANTRY_THEME]/custom/particles`. Please check the list below to determine where the template folder for your CMS is located.
-4. Copy the `.js` file to the folder `/[GANTRY_THEME]/custom/js`. Create it if it does not exist.
+3. Copy the `.html.twig` and the `.yaml` file to your particle folder `/[GANTRY_THEME]/custom/particles`. Please check the [listing](https://github.com/thexmanxyz/Sticky-Mobile-Menu-Gantry#cms-template-folder) below to determine where the template folder for your CMS is located.
+4. Copy the `.js` file to the folder `/[GANTRY_THEME]/custom/js`. Create the folder if it does not exist.
 
 ## CMS Template Folder
 Please be aware that the template folder path varies in dependence of the used CMS. Here is a list of the folders for the different platforms:
@@ -55,6 +55,7 @@ Please be aware that the template folder path varies in dependence of the used C
 1. Go to your Gantry templating backend (e.g. Extensions/Templates).
 2. Switch to **Page Settings** and add the new appearing Atom called **Sticky Mobile Menu** either globally to your site (**base outline**), to a specific template or page by dragging it to the designated section.
 3. Configure the appearance according to your favor.
+4. [Optional] The download package contains the JS file of the project. You can embed it over the backend configuration if you do not want to use the default CDN. If you chose automatic installation the file is already there.
 
 ## Supported Parameters and Atom Options
 * Memorize Menu Selection
@@ -74,7 +75,7 @@ Insight of the *Sticky Mobile Menu - Gantry Atom* configuration:
 ![1](/screenshots/backend_js.png)
 
 ## Future Tasks
-* none
+- [ ] add more languages
 
 ## Known Issues
 * none
