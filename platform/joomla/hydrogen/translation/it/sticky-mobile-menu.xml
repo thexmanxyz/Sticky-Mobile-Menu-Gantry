@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <extension type="file" method="upgrade" version="3.0">
     <name>Sticky Mobile Menu - Gantry Atom (Hydrogen)</name>
-    <version>1.0.5</version>
-    <creationDate>18.08.2018</creationDate>
+    <version>1.0.6</version>
+    <creationDate>18.06.2019</creationDate>
     <author>Andreas Kar</author>
     <authorEmail>andreas.kar@gmx.at</authorEmail>
     <authorUrl>https://gantryprojects.com</authorUrl>
-    <copyright>© 2018 Andreas Kar</copyright>
+    <copyright>© 2019 Andreas Kar</copyright>
     <license>MIT - see LICENSE.pdf</license>
     <description>
         <![CDATA[<div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -24,6 +24,7 @@
         </files>
         <files folder="js" target="templates/g5_hydrogen/custom/js">
             <filename>sticky-mobile-menu.js</filename>
+            <filename>sticky-mobile-menu.min.js</filename>
         </files>
     </fileset>
 </extension>

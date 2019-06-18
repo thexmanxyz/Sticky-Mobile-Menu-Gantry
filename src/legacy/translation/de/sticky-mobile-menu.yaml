@@ -83,7 +83,7 @@ form:
           label: JS Pfad
           description: Dateiname der JS Datei oder Pfad auf diesem Server (relativ zum Standort) bzw. auf einem anderen Server (absolut).
           placeholder: Pfad/zum/JS oder Dateiname
-          default: sticky-mobile-menu.js
+          default: sticky-mobile-menu.min.js
 
         js.execution:
           type: select.select
