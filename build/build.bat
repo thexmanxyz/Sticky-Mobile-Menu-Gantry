@@ -21,7 +21,7 @@ set scr_log_files=0
 
 REM --- project variables ---
 set prj_id=smm
-set prj_rev=v1.0.6
+set prj_rev=v1.0.7
 set prj_name=sticky-mobile-menu
 set prj_fullname=Sticky Mobile Menu - Atom
 set prj_title_hr=-----------------------------
