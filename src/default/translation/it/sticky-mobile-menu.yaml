@@ -27,7 +27,7 @@ form:
       default: true
 
     memorize:
-      type: input.checkbox
+      type: enable.enable
       label: Ricordare
       description: Ricorda l'ultima voce di menu attiva.
       default: 1

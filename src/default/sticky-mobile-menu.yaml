@@ -27,7 +27,7 @@ form:
       default: true
 
     memorize:
-      type: input.checkbox
+      type: enable.enable
       label: Memory
       description: Save the last active menu position.
       default: 1

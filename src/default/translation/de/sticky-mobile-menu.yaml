@@ -27,7 +27,7 @@ form:
       default: true
 
     memorize:
-      type: input.checkbox
+      type: enable.enable
       label: Merken
       description: Die letzte aktive Menu Position merken.
       default: 1
