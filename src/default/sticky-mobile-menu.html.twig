@@ -23,7 +23,7 @@
 {% set jsExecAttr = _self.getJSExecution(jsExec) %}
 {% set jsPrior = particle.js.priority|default(0) %}
 
-{% set cdnRepo = particle.cdn.base_url|default('https://cdn.jsdelivr.net/gh/thexmanxyz/Sticky-Mobile-Menu-Gantry/src/js') %}
+{% set cdnRepo = particle.cdn.base_url|default('https://cdn.jsdelivr.net/gh/thexmanxyz/Sticky-Mobile-Menu-Gantry@latest/src/js') %}
 {% set jsPath = _self.getResourceFilePath(particle.js, cdnRepo, 'sticky-mobile-menu', 'js') %}
 
 {% set enableMemory = (particle.memorize == 1 ? "true" : "false") %}
